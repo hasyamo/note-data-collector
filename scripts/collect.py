@@ -296,6 +296,12 @@ def collect_creator(urlname):
 
     # 4. Save prev for next diff
     save_articles_prev(urlname, articles)
+
+    # 5. Save last updated timestamp
+    now = datetime.now(JST).strftime("%Y-%m-%d %H:%M")
+    with open(os.path.join(user_dir, "last_updated.txt"), "w") as f:
+        f.write(now)
+
     print(f"  Done: {time.time() - start:.1f}s")
 
 

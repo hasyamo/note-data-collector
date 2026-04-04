@@ -16,6 +16,9 @@ on:
     - cron: '0 16 * * *'
   workflow_dispatch: # 手動実行用
 
+permissions:
+  contents: write
+
 jobs:
   collect:
     runs-on: ubuntu-latest
@@ -33,13 +36,27 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Sync existing data from note-fan-board
+        run: |
+          if [ -d ../note-fan-board/data ]; then
+            rsync -a ../note-fan-board/data/ data/
+          fi
+
       - name: Collect data
         env:
-          FAN_BOARD_REPO: ${{ github.workspace }}/../note-fan-board
-        run: python fan-board/collect.py
+          TESTERS_TXT: fan-board/testers.txt
+        run: python scripts/collect.py
 
-      - name: Commit and push to note-fan-board
+      - name: Commit data to collector
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || (git commit -m "📊 $(TZ=Asia/Tokyo date +%Y-%m-%d) data" && git push)
+
+      - name: Copy data to note-fan-board and push
+        run: |
+          rsync -a --delete data/ ../note-fan-board/data/
           cd ../note-fan-board
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

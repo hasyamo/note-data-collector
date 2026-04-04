@@ -1,5 +1,5 @@
 """
-note-fan-board データ収集スクリプト
+note データ収集スクリプト
 creators.txt + testers.txt に登録されたクリエイターのデータを収集・蓄積する
 すべて認証不要の公開APIを使用
 """
@@ -19,13 +19,13 @@ BASE_URL = "https://note.com"
 
 # note-data-collector のルート
 COLLECTOR_ROOT = os.path.dirname(os.path.dirname(__file__))
-# note-fan-board の data/ ディレクトリ（環境変数で指定、デフォルトは隣のリポジトリ）
-FAN_BOARD_REPO = os.environ.get("FAN_BOARD_REPO", os.path.join(COLLECTOR_ROOT, "..", "note-fan-board"))
-DATA_DIR = os.path.join(FAN_BOARD_REPO, "data")
+# データは自リポジトリの data/ に保存
+DATA_DIR = os.path.join(COLLECTOR_ROOT, "data")
 
 # クリエイターリストのパス
 CREATORS_TXT = os.path.join(COLLECTOR_ROOT, "creators.txt")
-TESTERS_TXT = os.path.join(COLLECTOR_ROOT, "fan-board", "testers.txt")
+# テスターリストは環境変数で指定（ツールごとに異なる）
+TESTERS_TXT = os.environ.get("TESTERS_TXT", os.path.join(COLLECTOR_ROOT, "fan-board", "testers.txt"))
 
 JST = timezone(timedelta(hours=9))
 TODAY = datetime.now(JST).strftime("%Y-%m-%d")
@@ -220,7 +220,6 @@ def collect_likes(urlname, articles):
         print(f"  Likes: baseline mode ({len(articles)} articles)")
         keys = [a["key"] for a in articles]
     else:
-        # Check which articles have new likes by comparing with saved articles
         prev_filepath = os.path.join(DATA_DIR, urlname, "articles_prev.csv")
         prev_likes = {}
         if os.path.exists(prev_filepath):
@@ -304,7 +303,7 @@ MAX_THREADS = 3
 
 
 def main():
-    print(f"=== note-fan-board collector ({TODAY}) ===")
+    print(f"=== note data collector ({TODAY}) ===")
     print(f"DATA_DIR: {DATA_DIR}")
 
     creators = load_creators()

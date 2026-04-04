@@ -1,0 +1,47 @@
+name: Collect Fan Data
+
+on:
+  schedule:
+    # 5:00 JST = 20:00 UTC前日
+    - cron: '0 20 * * *'
+    # 9:00 JST = 0:00 UTC
+    - cron: '0 0 * * *'
+    # 13:00 JST = 4:00 UTC
+    - cron: '0 4 * * *'
+    # 17:00 JST = 8:00 UTC
+    - cron: '0 8 * * *'
+    # 21:00 JST = 12:00 UTC
+    - cron: '0 12 * * *'
+    # 1:00 JST = 16:00 UTC
+    - cron: '0 16 * * *'
+  workflow_dispatch: # 手動実行用
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout collector
+        uses: actions/checkout@v4
+
+      - name: Clone note-fan-board
+        run: |
+          git clone https://x-access-token:${{ secrets.FAN_BOARD_TOKEN }}@github.com/hasyamo/note-fan-board.git ../note-fan-board
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Collect data
+        env:
+          FAN_BOARD_REPO: ${{ github.workspace }}/../note-fan-board
+        run: python fan-board/collect.py
+
+      - name: Commit and push to note-fan-board
+        run: |
+          cd ../note-fan-board
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || (git commit -m "📊 $(TZ=Asia/Tokyo date +%Y-%m-%d) fan data" && git push)

@@ -319,6 +319,14 @@ def main():
 
     print(f"Creators: {len(creators)}, threads: {MAX_THREADS}")
 
+    # ダッシュボードが読み込む creators.csv を生成
+    os.makedirs(DATA_DIR, exist_ok=True)
+    with open(os.path.join(DATA_DIR, "creators.csv"), "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["urlname"])
+        for urlname in creators:
+            w.writerow([urlname])
+
     if len(creators) <= MAX_THREADS:
         for urlname in creators:
             try:

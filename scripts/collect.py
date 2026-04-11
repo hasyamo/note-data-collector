@@ -58,7 +58,8 @@ def fetch_json(url):
 # ===== Creators =====
 
 def load_txt(filepath):
-    """テキストファイルから1行1ユーザー名を読み込む（#でコメント、空行スキップ）"""
+    """テキストファイルから1行1ユーザー名を読み込む（#でコメント、空行スキップ）
+    フォーマット: urlname [YYYY-MM-DD] （日付は省略可、ここでは無視）"""
     names = []
     if not os.path.exists(filepath):
         return names
@@ -66,7 +67,7 @@ def load_txt(filepath):
         for line in f:
             line = line.strip()
             if line and not line.startswith("#"):
-                names.append(line)
+                names.append(line.split()[0])
     return names
 
 

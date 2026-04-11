@@ -589,6 +589,14 @@ def main():
             print(f"  {urlname}: no data dir, skipping")
             continue
 
+        # 加入日を含む週より前はスキップ
+        if joined:
+            joined_date = date.fromisoformat(joined)
+            joined_monday = joined_date - timedelta(days=joined_date.weekday())
+            if monday < joined_monday:
+                print(f"  {urlname}: joined {joined}, week {iso_week(monday)} is before join week, skipping")
+                continue
+
         try:
             letter, year = generate_letter(urlname, creator_dir, target)
             filepath = save_letter(urlname, letter, year)

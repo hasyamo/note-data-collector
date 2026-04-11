@@ -7,9 +7,13 @@ import os
 import csv
 import json
 import sys
+import time
 from datetime import datetime, timezone, timedelta, date
+from urllib.request import Request, urlopen
+from urllib.error import HTTPError, URLError
 
 JST = timezone(timedelta(hours=9))
+SLEEP_BETWEEN_REQUESTS = 0.5
 
 # パス設定
 COLLECTOR_ROOT = os.path.dirname(os.path.dirname(__file__))
@@ -21,6 +25,102 @@ SEVEN_LETTERS_DATA = os.environ.get("SEVEN_LETTERS_DATA", os.path.join(COLLECTOR
 
 
 # ===== Utilities =====
+
+# ===== HTTP =====
+
+def fetch_json(url):
+    req = Request(url)
+    req.add_header("Accept", "application/json, text/plain, */*")
+    req.add_header("User-Agent", "Mozilla/5.0")
+    req.add_header("Referer", "https://note.com/")
+    try:
+        with urlopen(req, timeout=30) as res:
+            return json.loads(res.read().decode("utf-8"))
+    except HTTPError as e:
+        print(f"    HTTP error {e.code}: {url}")
+        return None
+    except URLError as e:
+        print(f"    URL error: {e.reason}")
+        return None
+
+
+# ===== Comments =====
+
+def parse_comment_body(body):
+    """構造化コメントからプレーンテキストを抽出（ohenji-note/src/utils.js準拠）"""
+    if isinstance(body, str):
+        return body
+    if not body or not isinstance(body, dict):
+        return str(body or '')
+
+    def extract_text(node):
+        if isinstance(node, str):
+            return node
+        if not node or not isinstance(node, dict):
+            return ''
+        if node.get("type") == "text":
+            return node.get("value", "")
+        if isinstance(node.get("children"), list):
+            return ''.join(extract_text(c) for c in node["children"])
+        return ''
+
+    if isinstance(body.get("children"), list):
+        return '\n'.join(extract_text(c) for c in body["children"])
+    if isinstance(body, list):
+        return '\n'.join(extract_text(c) for c in body)
+    return str(body or '')
+
+
+def fetch_article_comments(note_key):
+    """記事のコメントを全ページ取得（ohenji-note/src/api.js準拠）"""
+    comments = []
+    page = 1
+    while True:
+        url = f"https://note.com/api/v3/notes/{note_key}/note_comments?per_page=10&page={page}"
+        resp = fetch_json(url)
+        if resp is None:
+            break
+        data = resp.get("data", [])
+        if not data:
+            break
+        comments.extend(data)
+        if not resp.get("next_page"):
+            break
+        page += 1
+        time.sleep(SLEEP_BETWEEN_REQUESTS)
+    return comments
+
+
+def fetch_week_comments(creator_urlname, week_articles):
+    """今週の記事のコメントを取得し、自分のコメントを除外して整形"""
+    all_comments = []
+    articles_with_comments = [a for a in week_articles if a.get("comment_count", 0) > 0]
+
+    for art in articles_with_comments:
+        raw_comments = fetch_article_comments(art["key"])
+        for c in raw_comments:
+            user = c.get("user", {})
+            if user.get("urlname") == creator_urlname:
+                continue  # 自分のコメントは除外
+            body = parse_comment_body(c.get("comment", ""))
+            if len(body) > 80:
+                body = body[:80] + "…"
+            # 記事タイトルから「｜」以降を除去
+            title = art.get("title", "")
+            if "｜" in title:
+                title = title.split("｜")[0]
+            all_comments.append({
+                "key": c.get("key", ""),
+                "user_name": user.get("nickname", ""),
+                "user_icon": user.get("profile_image_url", ""),
+                "body": body,
+                "article_title": title,
+                "note_key": art["key"],
+            })
+        time.sleep(SLEEP_BETWEEN_REQUESTS)
+
+    return all_comments
+
 
 def load_creators():
     """creators.txtから urlname と joined日付を読み込む
@@ -378,6 +478,15 @@ def generate_letter(creator, creator_dir, target_date):
     # 内部フィールドを除去
     clean_stats = {k: v for k, v in stats.items() if not k.startswith("_")}
 
+    # コメント取得
+    articles = load_articles(creator_dir)
+    week_articles = [a for a in articles if start <= a["published_dt"] <= end]
+    comments = fetch_week_comments(creator, week_articles)
+
+    # コメンターのユニーク人数
+    commenters = set(c["user_name"] for c in comments)
+    clean_stats["commenters_count"] = len(commenters)
+
     week = iso_week(monday)
 
     letter = {
@@ -391,6 +500,9 @@ def generate_letter(creator, creator_dir, target_date):
         "rare": rare,
         "stats": clean_stats,
     }
+
+    if comments:
+        letter["comments"] = comments
 
     if rare:
         # レア通し番号は既存レターから算出

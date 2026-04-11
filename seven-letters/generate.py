@@ -388,6 +388,14 @@ def main():
         print("No creators found")
         sys.exit(1)
 
+    # creators.csv を生成
+    os.makedirs(SEVEN_LETTERS_DATA, exist_ok=True)
+    with open(os.path.join(SEVEN_LETTERS_DATA, "creators.csv"), "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["urlname"])
+        for entry in creators:
+            w.writerow([entry["urlname"]])
+
     monday, sunday, start, end = week_start_end(target)
     print(f"=== seven-letters generate ===")
     print(f"Week: {iso_week(monday)} ({monday} ~ {sunday})")

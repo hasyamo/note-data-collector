@@ -477,15 +477,6 @@ def main():
             print(f"  {urlname}: no data dir, skipping")
             continue
 
-        # 加入後2週目以降のみ生成
-        if joined:
-            joined_date = date.fromisoformat(joined)
-            joined_monday = joined_date - timedelta(days=joined_date.weekday())
-            min_monday = joined_monday + timedelta(days=14)  # 2週後の月曜
-            if monday < min_monday:
-                print(f"  {urlname}: joined {joined}, too early (need {min_monday}), skipping")
-                continue
-
         try:
             letter, year = generate_letter(urlname, creator_dir, target)
             filepath = save_letter(urlname, letter, year)

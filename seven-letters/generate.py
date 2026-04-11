@@ -217,6 +217,23 @@ def compute_stats(creator_dir, monday, sunday, start, end, prev_start, prev_end)
         variance = sum((m - avg) ** 2 for m in minutes) / len(minutes)
         time_consistency_minutes = variance ** 0.5
 
+    # --- 記事特性ポイント用 ---
+    # コメント率 (コメント/スキ比)
+    comment_ratio = comments_total / max(likes_total, 1)
+
+    # スキのバラつき (記事間の標準偏差 / 平均)
+    likes_variance = 0
+    if len(week_articles) >= 2:
+        like_counts = [a["like_count"] for a in week_articles]
+        avg_likes = sum(like_counts) / len(like_counts)
+        if avg_likes > 0:
+            likes_variance = (sum((x - avg_likes) ** 2 for x in like_counts) / len(like_counts)) ** 0.5 / avg_likes
+
+    # 平均タイトル文字数
+    avg_title_len = 0
+    if week_articles:
+        avg_title_len = sum(len(a["title"]) for a in week_articles) / len(week_articles)
+
     return {
         "likes_total": likes_total,
         "likes_prev": likes_prev,
@@ -231,73 +248,119 @@ def compute_stats(creator_dir, monday, sunday, start, end, prev_start, prev_end)
         "notable_reader": notable_reader,
         "_time_consistency_minutes": time_consistency_minutes,
         "_new_fan_ratio": new_fans / max(likes_total, 1),
+        "_comment_ratio": comment_ratio,
+        "_likes_variance": likes_variance,
+        "_avg_title_len": avg_title_len,
     }
 
 
 # ===== Sender Selection =====
 
-def select_sender(stats):
-    """差出人を選出。優先度順に判定。"""
+def select_sender(stats, prev_senders=None):
+    """差出人を選出。3層で判定:
+    1. ベース条件判定 → マッチしたキャラにポイント付与
+    2. 記事特性ポイントで微調整
+    3. 直近の差出人は減点
+    """
+    if prev_senders is None:
+        prev_senders = []
+
     s = stats
+    candidates = {}  # sender -> { condition, rare, score }
 
-    # 1. 月子: 連続投稿（毎日書いた = 7日）
-    if s["consecutive_days"] >= 7:
-        condition = "consecutive"
-        sender = "tsukiko"
-        # レア: 7日連続 (条件自体がレア判定)
-        rare = True
-        return sender, condition, rare
-
-    # 2. 陽: スキ増 (+20%以上)
-    if s["likes_prev"] > 0:
-        ratio = (s["likes_total"] - s["likes_prev"]) / s["likes_prev"]
-        if ratio >= 0.2:
-            condition = "likes_up"
-            sender = "you"
-            rare = ratio >= 0.5
-            return sender, condition, rare
-
-    # 3. 凛華: 投稿時間が一貫 (標準偏差30分以内)
+    # --- 1. ベース条件判定 + レアAND条件 ---
+    likes_ratio = (s["likes_total"] - s["likes_prev"]) / s["likes_prev"] if s["likes_prev"] > 0 else 0
     tc = s.get("_time_consistency_minutes")
-    if tc is not None and tc <= 30 and s["posts_count"] >= 3:
-        condition = "consistent_time"
-        sender = "rinka"
-        rare = tc <= 5
-        return sender, condition, rare
-
-    # 4. るな: 新規ファンが多い (3人以上)
-    if s["new_fans"] >= 3:
-        condition = "new_fans"
-        sender = "runa"
-        rare = s["_new_fan_ratio"] >= 0.3
-        return sender, condition, rare
-
-    # 5. まひる: 投稿頻度が多い (週3本以上)
-    if s["posts_count"] >= 3:
-        condition = "many_posts"
-        sender = "mahiru"
-        rare = s["posts_count"] >= 5
-        return sender, condition, rare
-
-    # 6. 日和: フォロワーが伸びた
     follower_diff = s["followers_end"] - s["followers_start"]
+
+    # 月子: 連続投稿（7日）/ レア: 7日連続 かつ スキ先週比+20%以上
+    if s["consecutive_days"] >= 7:
+        rare = s["consecutive_days"] >= 7 and likes_ratio >= 0.2
+        candidates["tsukiko"] = {"condition": "consecutive", "rare": rare, "score": 100}
+
+    # 陽: スキ増 (+20%以上) / レア: +50%以上 かつ 新規ファン5人以上
+    if likes_ratio >= 0.2:
+        rare = likes_ratio >= 0.5 and s["new_fans"] >= 5
+        candidates["you"] = {"condition": "likes_up", "rare": rare, "score": 90}
+
+    # 凛華: 投稿時間一貫 (30分以内) / レア: 5分以内 かつ 7日連続
+    if tc is not None and tc <= 30 and s["posts_count"] >= 3:
+        rare = tc <= 5 and s["consecutive_days"] >= 7
+        candidates["rinka"] = {"condition": "consistent_time", "rare": rare, "score": 80}
+
+    # るな: 新規ファンが多い (3人以上) / レア: 新規ファン率30%以上 かつ フォロワー増
+    if s["new_fans"] >= 3:
+        rare = s["_new_fan_ratio"] >= 0.3 and follower_diff > 0
+        candidates["runa"] = {"condition": "new_fans", "rare": rare, "score": 70}
+
+    # まひる: 投稿頻度が多い (週3本以上) / レア: 週5本以上 かつ コメント率高い
+    if s["posts_count"] >= 3:
+        rare = s["posts_count"] >= 5 and s.get("_comment_ratio", 0) > 0.3
+        candidates["mahiru"] = {"condition": "many_posts", "rare": rare, "score": 60}
+
+    # 日和: フォロワーが伸びた / レア: 切り番達成 かつ 新規ファンもいる
     if follower_diff > 0:
-        condition = "followers_up"
-        sender = "hiyori"
-        # レア: 切り番達成
         rare = False
         if s["followers_end"] >= 100:
-            prev_hundred = s["followers_start"] // 100
-            curr_hundred = s["followers_end"] // 100
-            if curr_hundred > prev_hundred:
-                rare = True
-        return sender, condition, rare
+            if s["followers_end"] // 100 > s["followers_start"] // 100:
+                rare = s["new_fans"] >= 1
+        candidates["hiyori"] = {"condition": "followers_up", "rare": rare, "score": 50}
 
-    # 7. しずく: どれにも当てはまらない
-    return "shizuku", "quiet", False
+    # しずく: 常に候補（最低スコア）
+    candidates["shizuku"] = {"condition": "quiet", "rare": False, "score": 10}
+
+    # --- 2. 記事特性ポイント ---
+    comment_ratio = s.get("_comment_ratio", 0)
+    likes_variance = s.get("_likes_variance", 0)
+    avg_title_len = s.get("_avg_title_len", 0)
+
+    # コメント率が高い → まひる（対話）、日和（成長）にボーナス
+    if comment_ratio > 0.3:
+        for k in ["mahiru", "hiyori"]:
+            if k in candidates:
+                candidates[k]["score"] += 15
+
+    # スキのバラつきが大きい → 陽（盛り上がり）にボーナス
+    if likes_variance > 0.5:
+        if "you" in candidates:
+            candidates["you"]["score"] += 10
+
+    # タイトルが長い → 凛華（丁寧さ）にボーナス
+    if avg_title_len > 30:
+        if "rinka" in candidates:
+            candidates["rinka"]["score"] += 10
+
+    # タイトルが短い → るな（カジュアル）にボーナス
+    if avg_title_len < 20 and avg_title_len > 0:
+        if "runa" in candidates:
+            candidates["runa"]["score"] += 10
+
+    # --- 3. 直近の差出人は減点 ---
+    for i, prev in enumerate(reversed(prev_senders)):
+        if prev in candidates:
+            # 直近1週前: -50, 2週前: -30, 3週前: -15
+            penalty = [50, 30, 15][i] if i < 3 else 5
+            candidates[prev]["score"] -= penalty
+
+    # --- 最高スコアのキャラを選出 ---
+    best = max(candidates.items(), key=lambda x: x[1]["score"])
+    sender = best[0]
+    return sender, best[1]["condition"], best[1]["rare"]
 
 
 # ===== Letter Generation =====
+
+def get_prev_senders(creator, year):
+    """既存レターから直近の差出人リストを取得"""
+    filepath = os.path.join(SEVEN_LETTERS_DATA, creator, "letters", f"{year}.json")
+    if not os.path.exists(filepath):
+        return []
+    with open(filepath, encoding="utf-8") as f:
+        data = json.load(f)
+    # 週でソートして差出人リストを返す
+    sorted_letters = sorted(data.get("letters", []), key=lambda l: l["week"])
+    return [l["sender"] for l in sorted_letters]
+
 
 def generate_letter(creator, creator_dir, target_date):
     monday, sunday, start, end = week_start_end(target_date)
@@ -309,7 +372,8 @@ def generate_letter(creator, creator_dir, target_date):
     prev_end = datetime(prev_sunday.year, prev_sunday.month, prev_sunday.day, 5, 0, 0, tzinfo=JST) + timedelta(days=1) - timedelta(seconds=1)
 
     stats = compute_stats(creator_dir, monday, sunday, start, end, prev_start, prev_end)
-    sender, condition, rare = select_sender(stats)
+    prev_senders = get_prev_senders(creator, monday.year)
+    sender, condition, rare = select_sender(stats, prev_senders)
 
     # 内部フィールドを除去
     clean_stats = {k: v for k, v in stats.items() if not k.startswith("_")}

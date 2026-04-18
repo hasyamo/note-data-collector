@@ -16,6 +16,10 @@ on:
     - cron: '0 16 * * *'
   workflow_dispatch: # 手動実行用
 
+concurrency:
+  group: collect-fan-data
+  cancel-in-progress: false
+
 permissions:
   contents: write
 

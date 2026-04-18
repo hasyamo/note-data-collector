@@ -401,7 +401,7 @@ def collect_magazines(urlname, articles):
     now_iso = datetime.now(JST).strftime("%Y-%m-%dT%H:%M:%S+09:00")
 
     if is_baseline:
-        print(f"  Magazines: baseline mode (no events will be recorded)")
+        print(f"  Magazines: baseline mode (using article published_at as detected_at)")
 
     # 3. 全記事のbelonging_magazine_keysを取得
     for i, a in enumerate(articles, 1):
@@ -414,23 +414,25 @@ def collect_magazines(urlname, articles):
                     new_memberships[(nk, mk)] = fs
             continue
 
+        # baseline時は記事の公開日時を検出日時として扱う
+        event_time = a.get("published_at", now_iso) if is_baseline else now_iso
+
         for mk in mag_keys:
             prev_seen = prev_memberships.get((note_key, mk))
             if prev_seen:
                 # 既存
                 new_memberships[(note_key, mk)] = prev_seen
             else:
-                # 初回検出（baselineモードではイベント記録しない）
-                new_memberships[(note_key, mk)] = now_iso
-                if not is_baseline:
-                    events.append({
-                        "detected_at": now_iso,
-                        "event_type": "added",
-                        "note_key": note_key,
-                        "magazine_key": mk,
-                    })
+                # 新規検出
+                new_memberships[(note_key, mk)] = event_time
+                events.append({
+                    "detected_at": event_time,
+                    "event_type": "added",
+                    "note_key": note_key,
+                    "magazine_key": mk,
+                })
 
-        # 削除イベント: 前回あって今回ない組み合わせ
+        # 削除イベント: 前回あって今回ない組み合わせ（baseline時はなし）
         if not is_baseline:
             for (nk, mk) in prev_memberships:
                 if nk == note_key and mk not in mag_keys:
@@ -452,21 +454,22 @@ def collect_magazines(urlname, articles):
     removed_count = sum(1 for e in events if e["event_type"] == "removed")
     print(f"  Magazines: {added_count} added, {removed_count} removed")
 
-    # 5. 新規追加されたマガジンの詳細を取得・保存（外部マガジンのみ、baseline時はスキップ）
-    if not is_baseline:
-        new_mag_keys = set(e["magazine_key"] for e in events if e["event_type"] == "added")
-        new_external = [mk for mk in new_mag_keys if mk not in joined_keys]
-        if new_external:
-            print(f"  Magazines: fetching {len(new_external)} new external magazine details")
-            for mk in new_external:
-                # 既に保存されてるかチェック
-                filepath = os.path.join(DATA_DIR, urlname, "magazines", f"{mk}.json")
-                if os.path.exists(filepath):
-                    continue
-                detail = fetch_magazine_detail(mk)
-                if detail:
-                    save_magazine_detail(urlname, detail)
-                time.sleep(SLEEP_BETWEEN_REQUESTS)
+    # 5. 新規追加されたマガジンの詳細を取得・保存（外部マガジンのみ）
+    new_mag_keys = set(e["magazine_key"] for e in events if e["event_type"] == "added")
+    new_external = [mk for mk in new_mag_keys if mk not in joined_keys]
+    # 既に保存済みのものは除外
+    external_to_fetch = []
+    for mk in new_external:
+        filepath = os.path.join(DATA_DIR, urlname, "magazines", f"{mk}.json")
+        if not os.path.exists(filepath):
+            external_to_fetch.append(mk)
+    if external_to_fetch:
+        print(f"  Magazines: fetching {len(external_to_fetch)} new external magazine details")
+        for mk in external_to_fetch:
+            detail = fetch_magazine_detail(mk)
+            if detail:
+                save_magazine_detail(urlname, detail)
+            time.sleep(SLEEP_BETWEEN_REQUESTS)
 
 
 # ===== Main =====

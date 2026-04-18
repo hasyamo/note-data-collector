@@ -30,8 +30,8 @@ TESTERS_TXT = os.environ.get("TESTERS_TXT", os.path.join(COLLECTOR_ROOT, "fan-bo
 JST = timezone(timedelta(hours=9))
 TODAY = datetime.now(JST).strftime("%Y-%m-%d")
 
-SLEEP_BETWEEN_REQUESTS = 1.0
-SLEEP_BETWEEN_ARTICLES = 1.5
+SLEEP_BETWEEN_REQUESTS = 0.75
+SLEEP_BETWEEN_ARTICLES = 0.75
 LIKES_API_SIZE = 50
 
 

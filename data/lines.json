@@ -1,0 +1,34 @@
+{
+  "you": {
+    "return_with_name": "久しぶりの人が戻ってきたよ！${name}さん、見に行こ！",
+    "new_with_name": "昨日、初めての人が来てくれたよ！${name}さん、覚えておこ！",
+    "regular_with_name": "昨日も${name}さん来てくれてたよ！いつもありがとだね！",
+    "many_visitors": "昨日${count}人も来てくれたよ！にぎやかだったね！",
+    "some_visitors": "昨日${count}人来てくれたよ！一人ひとり、ちゃんと見よ！",
+    "no_visitors": "昨日はお休みだったみたい。でも大丈夫、今日の記事で変わるよ！"
+  },
+  "rinka": {
+    "return_multi": "${name}さん含め${count}人、戻ってきたわ。……会いに行きなさい。",
+    "return_single": "${name}さんが戻ってきた。……放っておくの？",
+    "new_multi": "新しい人が${count}人。……ちゃんと覚えなさい。",
+    "new_single": "${name}さんが初めて来たわ。……挨拶くらい、しなさい。",
+    "at_risk_multi": "……${name}さん含め${count}人、最近来てない。会いに行かないの？",
+    "at_risk_single": "${name}さん、最近来てない。……気づいてる？",
+    "regular_many": "常連が${count}人。……ちゃんとお礼しなさいよ。",
+    "fallback": "今週のスキ、ちゃんと確認しなさい。"
+  },
+  "runa": {
+    "tied_top": "${count}人が同率1位！みんなありがとー！",
+    "many_new": "新しい人が${count}人もランクインしてるよ！広がってるね！",
+    "many_regular": "常連さんが${count}人！安定感あるね！",
+    "top_name": "${name}さんがトップだよ！いつもありがとね！",
+    "no_data": "まだスキがないみたい。これからだよ！"
+  },
+  "hiyori": {
+    "single_event": "${count}本、あなたの記事がマガジンに入ったよ。嬉しいね。",
+    "multi_event": "${count}本も追加されてるよ。あなたの言葉、広がってるね。",
+    "many_event": "${count}本！たくさん大事にされてるね。あなたのペースでお礼していこう。",
+    "repeat_from_user": "${name}さんが${count}本も追加してくれてるよ。ちゃんと見てくれてる人がいるんだね。",
+    "no_event": "この期間は、マガジンへの追加はなかったみたい。あなたのペースでいいからね。"
+  }
+}

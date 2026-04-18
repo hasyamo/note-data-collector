@@ -1,0 +1,13 @@
+{
+  "key": "mf2e92ffd6658",
+  "name": "今日の注目記事",
+  "magazine_url": "https://note.com/notemagazine/m/mf2e92ffd6658",
+  "cover": "https://assets.st-note.com/production/uploads/images/94191498/magazine_cover_large_926004d4fe638134882099064bef8f4e.png",
+  "cover_landscape": "https://assets.st-note.com/production/uploads/images/94191498/magazine_cover_landscape_926004d4fe638134882099064bef8f4e.png",
+  "is_jointly_managed": true,
+  "user": {
+    "urlname": "notemagazine",
+    "nickname": "noteマガジン",
+    "profile_image_path": "https://assets.st-note.com/poc-image/manual/preset_user_image/production/i1bbf72cee783.jpg"
+  }
+}

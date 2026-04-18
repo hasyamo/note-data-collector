@@ -265,6 +265,210 @@ def save_articles_prev(urlname, articles):
             writer.writerow([a["key"], a["like_count"]])
 
 
+# ===== Magazines =====
+
+def fetch_joined_magazines(urlname):
+    """自分が参加している全マガジン（自分作成＋共同運営参加）を取得"""
+    magazines = []
+    page = 1
+    while True:
+        url = f"{BASE_URL}/api/v2/creators/{urlname}/contents?kind=magazine&page={page}&per=20&disable_pinned=false&with_notes=false"
+        resp = fetch_json(url)
+        if resp is None:
+            break
+        d = resp.get("data", {})
+        contents = d.get("contents", [])
+        if not contents:
+            break
+        magazines.extend(contents)
+        if d.get("isLastPage"):
+            break
+        page += 1
+        time.sleep(SLEEP_BETWEEN_REQUESTS)
+    return magazines
+
+
+def fetch_article_magazine_keys(note_key):
+    """記事に紐づくマガジンキー一覧を取得"""
+    url = f"{BASE_URL}/api/v3/notes/{note_key}"
+    resp = fetch_json(url)
+    if resp is None:
+        return None
+    d = resp.get("data", {})
+    return d.get("belonging_magazine_keys", []) or []
+
+
+def fetch_magazine_detail(mag_key):
+    """マガジンの詳細情報を取得"""
+    url = f"{BASE_URL}/api/v1/magazines/{mag_key}"
+    resp = fetch_json(url)
+    if resp is None:
+        return None
+    d = resp.get("data", resp)
+    user = d.get("user", {})
+    return {
+        "key": d.get("key"),
+        "name": d.get("name"),
+        "magazine_url": d.get("magazine_url"),
+        "cover": d.get("cover"),
+        "cover_landscape": d.get("cover_landscape"),
+        "is_jointly_managed": d.get("is_jointly_managed"),
+        "user": {
+            "urlname": user.get("urlname"),
+            "nickname": user.get("nickname"),
+            "profile_image_path": user.get("user_profile_image_path"),
+        },
+    }
+
+
+def load_magazine_memberships(urlname):
+    """現在のメンバーシップ状態を読み込む: {(note_key, magazine_key): first_seen_at}"""
+    filepath = os.path.join(DATA_DIR, urlname, "magazine_memberships.csv")
+    memberships = {}
+    if not os.path.exists(filepath):
+        return memberships
+    with open(filepath, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            memberships[(row["note_key"], row["magazine_key"])] = row.get("first_seen_at", "")
+    return memberships
+
+
+def save_magazine_memberships(urlname, memberships):
+    """メンバーシップ状態を保存"""
+    filepath = os.path.join(DATA_DIR, urlname, "magazine_memberships.csv")
+    with open(filepath, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(["note_key", "magazine_key", "first_seen_at"])
+        for (nk, mk), fs in sorted(memberships.items()):
+            writer.writerow([nk, mk, fs])
+
+
+def append_magazine_events(urlname, events):
+    """イベント履歴に追記"""
+    if not events:
+        return
+    filepath = os.path.join(DATA_DIR, urlname, "magazine_events.csv")
+    file_exists = os.path.exists(filepath)
+    with open(filepath, "a", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow(["detected_at", "event_type", "note_key", "magazine_key"])
+        for e in events:
+            writer.writerow([e["detected_at"], e["event_type"], e["note_key"], e["magazine_key"]])
+
+
+def save_joined_magazines(urlname, joined):
+    """参加マガジン一覧を保存"""
+    filepath = os.path.join(DATA_DIR, urlname, "joined_magazines.csv")
+    with open(filepath, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(["magazine_key", "owner_urlname", "is_jointly_managed", "name"])
+        for m in joined:
+            user = m.get("user", {})
+            writer.writerow([
+                m.get("key"),
+                user.get("urlname", ""),
+                m.get("isJointlyManaged", False),
+                m.get("name", ""),
+            ])
+
+
+def save_magazine_detail(urlname, detail):
+    """マガジン詳細情報をJSONで保存"""
+    mag_dir = os.path.join(DATA_DIR, urlname, "magazines")
+    os.makedirs(mag_dir, exist_ok=True)
+    filepath = os.path.join(mag_dir, f"{detail['key']}.json")
+    with open(filepath, "w", encoding="utf-8") as f:
+        json.dump(detail, f, ensure_ascii=False, indent=2)
+
+
+def collect_magazines(urlname, articles):
+    """マガジン情報を収集して差分検出"""
+    # 1. 参加マガジンリストを取得・保存
+    joined = fetch_joined_magazines(urlname)
+    joined_keys = set(m["key"] for m in joined)
+    save_joined_magazines(urlname, joined)
+    print(f"  Magazines: {len(joined)} joined")
+    time.sleep(SLEEP_BETWEEN_REQUESTS)
+
+    # 2. 既存のメンバーシップを読み込む
+    memberships_file = os.path.join(DATA_DIR, urlname, "magazine_memberships.csv")
+    is_baseline = not os.path.exists(memberships_file)
+    prev_memberships = load_magazine_memberships(urlname)
+    new_memberships = {}
+    events = []
+    now_iso = datetime.now(JST).strftime("%Y-%m-%dT%H:%M:%S+09:00")
+
+    if is_baseline:
+        print(f"  Magazines: baseline mode (no events will be recorded)")
+
+    # 3. 全記事のbelonging_magazine_keysを取得
+    for i, a in enumerate(articles, 1):
+        note_key = a["key"]
+        mag_keys = fetch_article_magazine_keys(note_key)
+        if mag_keys is None:
+            # 取得失敗時は前回データを維持
+            for (nk, mk), fs in prev_memberships.items():
+                if nk == note_key:
+                    new_memberships[(nk, mk)] = fs
+            continue
+
+        for mk in mag_keys:
+            prev_seen = prev_memberships.get((note_key, mk))
+            if prev_seen:
+                # 既存
+                new_memberships[(note_key, mk)] = prev_seen
+            else:
+                # 初回検出（baselineモードではイベント記録しない）
+                new_memberships[(note_key, mk)] = now_iso
+                if not is_baseline:
+                    events.append({
+                        "detected_at": now_iso,
+                        "event_type": "added",
+                        "note_key": note_key,
+                        "magazine_key": mk,
+                    })
+
+        # 削除イベント: 前回あって今回ない組み合わせ
+        if not is_baseline:
+            for (nk, mk) in prev_memberships:
+                if nk == note_key and mk not in mag_keys:
+                    events.append({
+                        "detected_at": now_iso,
+                        "event_type": "removed",
+                        "note_key": note_key,
+                        "magazine_key": mk,
+                    })
+
+        if i < len(articles):
+            time.sleep(SLEEP_BETWEEN_REQUESTS)
+
+    # 4. メンバーシップとイベントを保存
+    save_magazine_memberships(urlname, new_memberships)
+    append_magazine_events(urlname, events)
+
+    added_count = sum(1 for e in events if e["event_type"] == "added")
+    removed_count = sum(1 for e in events if e["event_type"] == "removed")
+    print(f"  Magazines: {added_count} added, {removed_count} removed")
+
+    # 5. 新規追加されたマガジンの詳細を取得・保存（外部マガジンのみ、baseline時はスキップ）
+    if not is_baseline:
+        new_mag_keys = set(e["magazine_key"] for e in events if e["event_type"] == "added")
+        new_external = [mk for mk in new_mag_keys if mk not in joined_keys]
+        if new_external:
+            print(f"  Magazines: fetching {len(new_external)} new external magazine details")
+            for mk in new_external:
+                # 既に保存されてるかチェック
+                filepath = os.path.join(DATA_DIR, urlname, "magazines", f"{mk}.json")
+                if os.path.exists(filepath):
+                    continue
+                detail = fetch_magazine_detail(mk)
+                if detail:
+                    save_magazine_detail(urlname, detail)
+                time.sleep(SLEEP_BETWEEN_REQUESTS)
+
+
 # ===== Main =====
 
 def collect_creator(urlname):
@@ -295,10 +499,13 @@ def collect_creator(urlname):
     # 3. Likes
     collect_likes(urlname, articles)
 
-    # 4. Save prev for next diff
+    # 4. Magazines
+    collect_magazines(urlname, articles)
+
+    # 5. Save prev for next diff
     save_articles_prev(urlname, articles)
 
-    # 5. Save last updated timestamp
+    # 6. Save last updated timestamp
     now = datetime.now(JST).strftime("%Y-%m-%d %H:%M")
     with open(os.path.join(user_dir, "last_updated.txt"), "w") as f:
         f.write(now)
@@ -310,23 +517,41 @@ MAX_THREADS = 3
 
 
 def main():
+    # 引数: --only urlname1,urlname2,... で特定クリエイターのみ実行
+    only_filter = None
+    for arg in sys.argv[1:]:
+        if arg.startswith("--only="):
+            only_filter = set(arg.split("=", 1)[1].split(","))
+        elif arg == "--only" and len(sys.argv) > sys.argv.index(arg) + 1:
+            idx = sys.argv.index(arg)
+            only_filter = set(sys.argv[idx + 1].split(","))
+
     print(f"=== note data collector ({TODAY}) ===")
     print(f"DATA_DIR: {DATA_DIR}")
+    if only_filter:
+        print(f"Filter: only {only_filter}")
 
     creators = load_creators()
     if not creators:
         print("No creators found")
         sys.exit(1)
 
+    if only_filter:
+        creators = [c for c in creators if c in only_filter]
+        if not creators:
+            print(f"No creators matched filter: {only_filter}")
+            sys.exit(1)
+
     print(f"Creators: {len(creators)}, threads: {MAX_THREADS}")
 
-    # ダッシュボードが読み込む creators.csv を生成
-    os.makedirs(DATA_DIR, exist_ok=True)
-    with open(os.path.join(DATA_DIR, "creators.csv"), "w", encoding="utf-8", newline="") as f:
-        w = csv.writer(f)
-        w.writerow(["urlname"])
-        for urlname in creators:
-            w.writerow([urlname])
+    # ダッシュボードが読み込む creators.csv を生成（--only指定時はスキップ）
+    if not only_filter:
+        os.makedirs(DATA_DIR, exist_ok=True)
+        with open(os.path.join(DATA_DIR, "creators.csv"), "w", encoding="utf-8", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(["urlname"])
+            for urlname in creators:
+                w.writerow([urlname])
 
     if len(creators) <= MAX_THREADS:
         for urlname in creators:

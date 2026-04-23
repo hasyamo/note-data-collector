@@ -260,9 +260,173 @@ def save_articles_prev(urlname, articles):
     filepath = os.path.join(DATA_DIR, urlname, "articles_prev.csv")
     with open(filepath, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["key", "like_count"])
+        writer.writerow(["key", "like_count", "comment_count"])
         for a in articles:
-            writer.writerow([a["key"], a["like_count"]])
+            writer.writerow([a["key"], a["like_count"], a["comment_count"]])
+
+
+# ===== Comments =====
+
+COMMENTS_BASELINE_DAYS = 90
+COMMENTS_API_PER_PAGE = 100
+
+
+def fetch_all_comments_for_article(note_key):
+    """記事のコメントを全ページ取得（rootのみ。仕様上、返信は別コメントとして同一レスポンスには含まれない）"""
+    all_comments = []
+    page = 1
+    while True:
+        url = f"{BASE_URL}/api/v3/notes/{note_key}/note_comments?per_page={COMMENTS_API_PER_PAGE}&page={page}"
+        resp = fetch_json(url)
+        if resp is None:
+            break
+        items = resp.get("data", [])
+        if not items:
+            break
+        all_comments.extend(items)
+        if not resp.get("next_page"):
+            break
+        page += 1
+        time.sleep(SLEEP_BETWEEN_REQUESTS)
+    return all_comments
+
+
+def load_existing_comment_ids(urlname):
+    filepath = os.path.join(DATA_DIR, urlname, "comments.csv")
+    if not os.path.exists(filepath):
+        return set()
+    existing = set()
+    with open(filepath, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            cid = row.get("comment_id")
+            if cid:
+                existing.add(cid)
+    return existing
+
+
+def parse_comment_body(body):
+    """構造化コメントからプレーンテキストを抽出"""
+    if isinstance(body, str):
+        return body
+    if not body or not isinstance(body, dict):
+        return str(body or "")
+
+    def extract_text(node):
+        if isinstance(node, str):
+            return node
+        if not node or not isinstance(node, dict):
+            return ""
+        if node.get("type") == "text":
+            return node.get("value", "")
+        if isinstance(node.get("children"), list):
+            return "".join(extract_text(c) for c in node["children"])
+        return ""
+
+    if isinstance(body.get("children"), list):
+        return "\n".join(extract_text(c) for c in body["children"])
+    return str(body or "")
+
+
+def append_comments(urlname, new_comments):
+    if not new_comments:
+        return
+    filepath = os.path.join(DATA_DIR, urlname, "comments.csv")
+    file_exists = os.path.exists(filepath)
+    write_header = not file_exists
+    if file_exists:
+        with open(filepath, newline="", encoding="utf-8") as f:
+            if not f.read().strip():
+                write_header = True
+    with open(filepath, "a", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        if write_header:
+            writer.writerow([
+                "comment_id", "note_key", "user_key", "user_name", "user_urlname",
+                "commented_at", "body",
+            ])
+        for c in new_comments:
+            writer.writerow([
+                c["comment_id"], c["note_key"], c["user_key"], c["user_name"],
+                c["user_urlname"], c["commented_at"], c["body"],
+            ])
+
+
+def normalize_comment(raw, note_key):
+    user = raw.get("user") or {}
+    return {
+        "comment_id": str(raw.get("key", "")),
+        "note_key": note_key,
+        "user_key": str(user.get("key", "")),
+        "user_name": user.get("nickname") or "",
+        "user_urlname": user.get("urlname") or "",
+        "commented_at": raw.get("created_at") or "",
+        "body": parse_comment_body(raw.get("comment")),
+    }
+
+
+def collect_comments(urlname, articles):
+    """記事のコメントを差分収集"""
+    existing_ids = load_existing_comment_ids(urlname)
+    baseline = len(existing_ids) == 0
+
+    if baseline:
+        # 直近 COMMENTS_BASELINE_DAYS 日以内の記事で comment_count>0 のものだけ
+        cutoff = datetime.now(JST) - timedelta(days=COMMENTS_BASELINE_DAYS)
+
+        def is_recent(published_at):
+            if not published_at:
+                return False
+            try:
+                s = published_at.strip()
+                if "." in s:
+                    s = s[: s.index(".")] + s[s.index("+"):]
+                dt = datetime.fromisoformat(s)
+                return dt.astimezone(JST) >= cutoff
+            except (ValueError, IndexError):
+                return False
+
+        keys = [a["key"] for a in articles if a["comment_count"] > 0 and is_recent(a["published_at"])]
+        print(f"  Comments: baseline mode ({len(keys)} articles in last {COMMENTS_BASELINE_DAYS} days)")
+    else:
+        # 前回のcomment_countと比較して増えた記事だけ
+        prev_filepath = os.path.join(DATA_DIR, urlname, "articles_prev.csv")
+        prev_counts = {}
+        if os.path.exists(prev_filepath):
+            with open(prev_filepath, newline="", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    prev_counts[row["key"]] = int(row.get("comment_count", 0) or 0)
+
+        keys = []
+        for a in articles:
+            prev = prev_counts.get(a["key"], 0)
+            if a["comment_count"] > prev:
+                keys.append(a["key"])
+
+        if not keys:
+            print(f"  Comments: no changes")
+            return
+        print(f"  Comments: {len(keys)} articles with new comments")
+
+    all_new = []
+    for i, key in enumerate(keys, 1):
+        raw = fetch_all_comments_for_article(key)
+        # クリエイター本人のコメント（返信）は除外
+        raw = [c for c in raw if (c.get("user") or {}).get("urlname") != urlname]
+        new = []
+        for c in raw:
+            norm = normalize_comment(c, key)
+            if norm["comment_id"] and norm["comment_id"] not in existing_ids:
+                new.append(norm)
+                existing_ids.add(norm["comment_id"])
+        all_new.extend(new)
+        print(f"    {i}/{len(keys)} {key}: {len(raw)} fetched, {len(new)} new")
+        if i < len(keys):
+            time.sleep(SLEEP_BETWEEN_ARTICLES)
+
+    append_comments(urlname, all_new)
+    print(f"  Comments: {len(all_new)} new comments saved")
 
 
 # ===== Magazines =====
@@ -505,10 +669,13 @@ def collect_creator(urlname):
     # 4. Magazines
     collect_magazines(urlname, articles)
 
-    # 5. Save prev for next diff
+    # 5. Comments
+    collect_comments(urlname, articles)
+
+    # 6. Save prev for next diff
     save_articles_prev(urlname, articles)
 
-    # 6. Save last updated timestamp
+    # 7. Save last updated timestamp
     now = datetime.now(JST).strftime("%Y-%m-%d %H:%M")
     with open(os.path.join(user_dir, "last_updated.txt"), "w") as f:
         f.write(now)

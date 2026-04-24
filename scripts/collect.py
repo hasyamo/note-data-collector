@@ -343,12 +343,12 @@ def append_comments(urlname, new_comments):
         if write_header:
             writer.writerow([
                 "comment_id", "note_key", "user_key", "user_name", "user_urlname",
-                "commented_at", "body",
+                "user_icon", "commented_at", "body",
             ])
         for c in new_comments:
             writer.writerow([
                 c["comment_id"], c["note_key"], c["user_key"], c["user_name"],
-                c["user_urlname"], c["commented_at"], c["body"],
+                c["user_urlname"], c["user_icon"], c["commented_at"], c["body"],
             ])
 
 
@@ -360,6 +360,7 @@ def normalize_comment(raw, note_key):
         "user_key": str(user.get("key", "")),
         "user_name": user.get("nickname") or "",
         "user_urlname": user.get("urlname") or "",
+        "user_icon": user.get("profile_image_url") or "",
         "commented_at": raw.get("created_at") or "",
         "body": parse_comment_body(raw.get("comment")),
     }

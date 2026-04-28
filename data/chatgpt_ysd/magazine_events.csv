@@ -1413,3 +1413,7 @@ detected_at,event_type,note_key,magazine_key
 2026-04-28T19:27:43+09:00,added,n7603affae1ac,m0a66c288c5f8
 2026-04-28T22:32:15+09:00,added,n7603affae1ac,m7325f611df66
 2026-04-28T22:32:15+09:00,added,n7603affae1ac,m78e1caab29a1
+2026-04-29T02:58:15+09:00,added,n7603affae1ac,mad8d2935fc54
+2026-04-29T02:58:15+09:00,removed,n0ed93029c231,m9017cd42bead
+2026-04-29T02:58:15+09:00,removed,n2aacbf43f3c7,m9017cd42bead
+2026-04-29T02:58:15+09:00,removed,nd870d6b06bcb,m9017cd42bead

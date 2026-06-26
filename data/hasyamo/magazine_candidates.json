@@ -1,0 +1,3170 @@
+{
+  "generated_at": "2026-05-06T23:21:55.699785+09:00",
+  "owner_urlname": "hasyamo",
+  "period": {
+    "type": "today_yesterday",
+    "from": "2026-05-05T00:00:00+09:00",
+    "to": "2026-05-06T23:19:35.825703+09:00"
+  },
+  "owned_magazines": [
+    {
+      "magazine_key": "mfe64df54c3a2",
+      "name": "おはようカノジョ開発日記",
+      "url": "https://note.com/hasyamo/m/mfe64df54c3a2"
+    },
+    {
+      "magazine_key": "m383d4222a51a",
+      "name": "元気が出る記事",
+      "url": "https://note.com/hasyamo/m/m383d4222a51a"
+    },
+    {
+      "magazine_key": "m4b28b43ad8da",
+      "name": "おはようカノジョ組込み検討",
+      "url": "https://note.com/hasyamo/m/m4b28b43ad8da"
+    }
+  ],
+  "items": [
+    {
+      "target_urlname": "crisp_chimp0823",
+      "target_name": "青井透子｜日常の過剰解釈屋　",
+      "target_profile_url": "https://note.com/crisp_chimp0823",
+      "reason_labels": [
+        "latest_article_reacted",
+        "commented",
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 2,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-06T22:58:38.633+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "comment",
+            "like"
+          ],
+          "reacted_at": "2026-05-06T22:58:38.633+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "comment",
+            "like"
+          ],
+          "reacted_at": "2026-05-06T22:48:50.382+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n912a1d696714",
+        "title": "【183日目】 AIイラスト｜まったり着ぐるみパジャマ",
+        "url": "https://note.com/crisp_chimp0823/n/n912a1d696714",
+        "published_at": "2026-05-06T21:00:05+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "hitsuji_natsume",
+      "target_name": "夏目羊",
+      "target_profile_url": "https://note.com/hitsuji_natsume",
+      "reason_labels": [],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T22:27:23.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n85ad90449e20",
+          "title": "ChatGPTが失敗するのを、楽しみにしていた｜おはようカノジョ #145",
+          "url": "https://note.com/hasyamo/n/n85ad90449e20",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T22:27:23.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nd665c1e3d0c6",
+        "title": "一言日記｜相方よ…本音はどっちなんだ？｜ChatGPT image-2｜AIとの共創｜黒羊",
+        "url": "https://note.com/hitsuji_natsume/n/nd665c1e3d0c6",
+        "published_at": "2026-04-25T08:01:08+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "shirono_aru",
+      "target_name": "しろのある",
+      "target_profile_url": "https://note.com/shirono_aru",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 3,
+        "comment_count": 0,
+        "reacted_article_count": 3,
+        "last_reacted_at": "2026-05-06T21:48:19.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T21:48:19.000+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T09:52:51.000+09:00"
+        },
+        {
+          "note_key": "n85ad90449e20",
+          "title": "ChatGPTが失敗するのを、楽しみにしていた｜おはようカノジョ #145",
+          "url": "https://note.com/hasyamo/n/n85ad90449e20",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T07:26:41.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n5b46add6ac51",
+        "title": "AIと私のカオスな事件簿。Claude連れの私が、ChatGPTのコミュニティで広報部長に就任した話。｜生成AI｜AI活用｜画像生成AI｜note運用｜創作｜漫画｜日記｜エッセイ｜",
+        "url": "https://note.com/shirono_aru/n/n5b46add6ac51",
+        "published_at": "2026-05-06T16:00:00+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "crisp_ixia5777",
+      "target_name": "キョウ@がんばる難病おじさん",
+      "target_profile_url": "https://note.com/crisp_ixia5777",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T20:05:04.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T20:05:04.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n46ce15f9213e",
+        "title": "ゴルフとマナー【振り返りパチンコ平成物語】",
+        "url": "https://note.com/crisp_ixia5777/n/n46ce15f9213e",
+        "published_at": "2026-05-06T19:22:05+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "yuura142",
+      "target_name": "やまざき悠＠AIライター",
+      "target_profile_url": "https://note.com/yuura142",
+      "reason_labels": [
+        "latest_article_reacted"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T19:13:02.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T19:13:02.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nf58d380e1ffa",
+        "title": "【挫折王の独白】副業は個人ビジネスなんだから好きにやれ！でも汗をかくことから逃げるなよ！一緒にやろうぜ！｜自己啓発｜失敗談｜note副業　",
+        "url": "https://note.com/yuura142/n/nf58d380e1ffa",
+        "published_at": "2026-05-06T19:09:49+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "8arms_io",
+      "target_name": "yoshi",
+      "target_profile_url": "https://note.com/8arms_io",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T18:59:10.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T18:59:10.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n8473e0d16b5b",
+        "title": "60日でMVP、1年で月商820万円。Robopostが教える「ソロ運営×Meta広告」の勝ち方",
+        "url": "https://note.com/8arms_io/n/n8473e0d16b5b",
+        "published_at": "2026-05-06T18:58:21+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "haruseiri",
+      "target_name": "ハル｜判断が整う発信設計",
+      "target_profile_url": "https://note.com/haruseiri",
+      "reason_labels": [
+        "latest_article_reacted",
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T18:40:12.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T18:40:12.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n5bef47f85fa3",
+        "title": "判断を１つ減らしただけで、文章が戻った日の話",
+        "url": "https://note.com/haruseiri/n/n5bef47f85fa3",
+        "published_at": "2026-05-06T18:35:32+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "just_seal6867",
+      "target_name": "俊也",
+      "target_profile_url": "https://note.com/just_seal6867",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 0,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-06T17:51:31.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T17:51:31.000+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T18:01:04.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n86951a60e888",
+        "title": "🧱明治維新の構造と現代日本の試行錯誤：土台としてのフィジカルAI 後編(3/3)/複数AI並行式「サピエンス全史を読む」第26回",
+        "url": "https://note.com/just_seal6867/n/n86951a60e888",
+        "published_at": "2026-05-06T16:20:53+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "ielts75_nz",
+      "target_name": "NZでのスローリハビリ生活",
+      "target_profile_url": "https://note.com/ielts75_nz",
+      "reason_labels": [
+        "latest_article_reacted",
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T17:40:46.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T17:40:46.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n90418320c556",
+        "title": "IELTSスピーキングPart 3、抽象的な質問で詰まらないための考え方",
+        "url": "https://note.com/ielts75_nz/n/n90418320c556",
+        "published_at": "2026-05-06T13:57:08+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "namishizuku",
+      "target_name": "波々　雫",
+      "target_profile_url": "https://note.com/namishizuku",
+      "reason_labels": [
+        "latest_article_reacted"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T17:22:22.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T17:22:22.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n2a1d6c50f390",
+        "title": "【ゲーム制作】長期開発でもClaudeCodeの作業効率をよくする方法",
+        "url": "https://note.com/namishizuku/n/n2a1d6c50f390",
+        "published_at": "2026-05-03T22:44:17+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "like_seal3854",
+      "target_name": "のぶパパ｜療育日記",
+      "target_profile_url": "https://note.com/like_seal3854",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 0,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-06T17:06:21.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T17:06:21.000+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T08:27:37.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "ncc8a3bb80b92",
+        "title": "【後編】記憶が飛びかけた1ヶ月｜極限ワンオペで気づいた「たった一つの正解」",
+        "url": "https://note.com/like_seal3854/n/ncc8a3bb80b92",
+        "published_at": "2026-05-06T17:01:36+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "kinomeno",
+      "target_name": "キノメノ",
+      "target_profile_url": "https://note.com/kinomeno",
+      "reason_labels": [
+        "latest_article_reacted",
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T16:57:36.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T16:57:36.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n274698d694ba",
+        "title": "細胞は、〇〇でできている",
+        "url": "https://note.com/kinomeno/n/n274698d694ba",
+        "published_at": "2026-05-06T03:33:13+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "prime_falcon7781",
+      "target_name": "柊しんのすけ",
+      "target_profile_url": "https://note.com/prime_falcon7781",
+      "reason_labels": [
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T16:41:44.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T16:41:44.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n4d20623665e7",
+        "title": "【GWの現実】為替は160円、俺の脳内はライブで満席",
+        "url": "https://note.com/prime_falcon7781/n/n4d20623665e7",
+        "published_at": "2026-05-06T08:20:30+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "compass_m360",
+      "target_name": "コンパス みき",
+      "target_profile_url": "https://note.com/compass_m360",
+      "reason_labels": [
+        "commented",
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 1,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T16:21:41.545+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "comment",
+            "like"
+          ],
+          "reacted_at": "2026-05-06T16:21:41.545+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "na83909144099",
+        "title": "📕物語作ったら🎤主題歌作りたくなりました〜",
+        "url": "https://note.com/compass_m360/n/na83909144099",
+        "published_at": "2026-05-06T21:03:00+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "safe_lupine8306",
+      "target_name": "あまっ子純情",
+      "target_profile_url": "https://note.com/safe_lupine8306",
+      "reason_labels": [
+        "latest_article_reacted"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T16:10:44.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T16:10:44.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n95c79bd791e3",
+        "title": "アラ還オヤジ達のウェルビーイング・ラインの最終回。正真正銘本物のウェルビーイングな時間になった日。",
+        "url": "https://note.com/safe_lupine8306/n/n95c79bd791e3",
+        "published_at": "2026-05-06T15:57:06+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "haru_tech_note",
+      "target_name": "Haru - AIと働くひとのメモ帳。",
+      "target_profile_url": "https://note.com/haru_tech_note",
+      "reason_labels": [
+        "latest_article_reacted",
+        "new",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 0,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-06T15:44:55.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T15:44:55.000+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T23:41:56.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n6eeae6f7b3c0",
+        "title": "GPT Image 2 の quality パラメータを3段階で比べてみた | テキスト入り図解とバナーで確認",
+        "url": "https://note.com/haru_tech_note/n/n6eeae6f7b3c0",
+        "published_at": "2026-05-06T15:22:09+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "morinokuma0215",
+      "target_name": "森のくま",
+      "target_profile_url": "https://note.com/morinokuma0215",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 0,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-06T14:19:38.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T14:19:38.000+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T01:52:28.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "stale",
+        "note_key": "n48878fbc3437",
+        "title": "紅茶　くまのひとり言（16）　不変のSEO対策は『やさしさ』である",
+        "url": "https://note.com/morinokuma0215/n/n48878fbc3437",
+        "published_at": "2026-04-17T15:03:15+09:00",
+        "is_in_my_magazine": null,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": []
+      }
+    },
+    {
+      "target_urlname": "scribble_1000",
+      "target_name": "sophie",
+      "target_profile_url": "https://note.com/scribble_1000",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T14:13:00.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T14:13:00.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n202f5f60a1bc",
+        "title": "#0055:55_489_3",
+        "url": "https://note.com/scribble_1000/n/n202f5f60a1bc",
+        "published_at": "2026-05-05T14:13:14+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "si_mbam4",
+      "target_name": "イシザキ",
+      "target_profile_url": "https://note.com/si_mbam4",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T13:56:21.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T13:56:21.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n945f50d47116",
+        "title": "世界観を変える…",
+        "url": "https://note.com/si_mbam4/n/n945f50d47116",
+        "published_at": "2026-05-06T02:52:51+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "links_lt",
+      "target_name": "りんくす@AI人格コーディネーター",
+      "target_profile_url": "https://note.com/links_lt",
+      "reason_labels": [
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T13:27:46.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T13:27:46.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n9804712161b4",
+        "title": "AIと喧嘩して気づいた職場の感情マネジメント",
+        "url": "https://note.com/links_lt/n/n9804712161b4",
+        "published_at": "2026-05-06T07:00:00+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "reipichu",
+      "target_name": "零ぴちゅ。",
+      "target_profile_url": "https://note.com/reipichu",
+      "reason_labels": [
+        "latest_article_reacted",
+        "commented",
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 1,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T13:02:40.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "comment",
+            "like"
+          ],
+          "reacted_at": "2026-05-06T13:02:40.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n85e0ded8785e",
+        "title": "【僕の趣味全開】サキュバス｜・・・になったら",
+        "url": "https://note.com/reipichu/n/n85e0ded8785e",
+        "published_at": "2026-05-06T05:31:23+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "shokoutan",
+      "target_name": "星川初稿",
+      "target_profile_url": "https://note.com/shokoutan",
+      "reason_labels": [
+        "latest_article_reacted",
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T12:59:27.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T12:59:27.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n0d5257ec3721",
+        "title": "嗤われる才能",
+        "url": "https://note.com/shokoutan/n/n0d5257ec3721",
+        "published_at": "2026-05-06T14:43:08+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "pontneuf2015",
+      "target_name": "pont neuf（ポンヌフ）",
+      "target_profile_url": "https://note.com/pontneuf2015",
+      "reason_labels": [
+        "latest_article_reacted",
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T12:56:56.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T12:56:56.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n5b6d7b352c9d",
+        "title": "柿の若葉を天日干しして、お茶作り",
+        "url": "https://note.com/pontneuf2015/n/n5b6d7b352c9d",
+        "published_at": "2026-05-06T13:58:40+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "yayofuji",
+      "target_name": "Yayoi Fujikura ",
+      "target_profile_url": "https://note.com/yayofuji",
+      "reason_labels": [
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T11:55:04.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "nb292c6ff9605",
+          "title": "おへんじ帖を作ったら、おへんじが来た。しかも、想像を超えて。｜おはようカノジョ #79",
+          "url": "https://note.com/hasyamo/n/nb292c6ff9605",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T11:55:04.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n2177814ffb54",
+        "title": "撮れたての薔薇をお届けいたします！四季の香ローズガーデン🌹in光が丘",
+        "url": "https://note.com/yayofuji/n/n2177814ffb54",
+        "published_at": "2026-05-06T17:52:01+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "dandan_arigato19",
+      "target_name": "だんだんありがと@めじゅ",
+      "target_profile_url": "https://note.com/dandan_arigato19",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 3,
+        "comment_count": 0,
+        "reacted_article_count": 3,
+        "last_reacted_at": "2026-05-06T11:41:55.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T11:41:55.000+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T11:41:54.000+09:00"
+        },
+        {
+          "note_key": "n85ad90449e20",
+          "title": "ChatGPTが失敗するのを、楽しみにしていた｜おはようカノジョ #145",
+          "url": "https://note.com/hasyamo/n/n85ad90449e20",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T17:57:15.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n2f5c84490789",
+        "title": "めじゅ語辞典 vol.31 【柏餅】",
+        "url": "https://note.com/dandan_arigato19/n/n2f5c84490789",
+        "published_at": "2026-05-06T06:00:00+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "pure_donkey7007",
+      "target_name": "Thanks AI",
+      "target_profile_url": "https://note.com/pure_donkey7007",
+      "reason_labels": [
+        "latest_article_reacted"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T11:41:06.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T11:41:06.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n75d24d79aa88",
+        "title": "Googleのジェミニーって何？",
+        "url": "https://note.com/pure_donkey7007/n/n75d24d79aa88",
+        "published_at": "2026-05-06T17:40:18+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "gem_emma",
+      "target_name": "Minase",
+      "target_profile_url": "https://note.com/gem_emma",
+      "reason_labels": [
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T11:36:58.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T11:36:58.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nf53c4b49587b",
+        "title": "【AI Edition】芳菲 (ファンフェイ)/ 春は暮れず｜Chinese Ballad｜永遠の未完と、静かなる執着",
+        "url": "https://note.com/gem_emma/n/nf53c4b49587b",
+        "published_at": "2026-05-06T12:04:21+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "yume_suisho",
+      "target_name": "水晶ゆめ🔮元占い師ライター・AIアートクリエイター",
+      "target_profile_url": "https://note.com/yume_suisho",
+      "reason_labels": [
+        "latest_article_reacted",
+        "commented",
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 3,
+        "comment_count": 2,
+        "reacted_article_count": 3,
+        "last_reacted_at": "2026-05-06T11:15:24.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "comment",
+            "like"
+          ],
+          "reacted_at": "2026-05-06T11:15:24.000+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "comment",
+            "like"
+          ],
+          "reacted_at": "2026-05-06T11:10:40.000+09:00"
+        },
+        {
+          "note_key": "n85ad90449e20",
+          "title": "ChatGPTが失敗するのを、楽しみにしていた｜おはようカノジョ #145",
+          "url": "https://note.com/hasyamo/n/n85ad90449e20",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T13:47:37.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n21bb60ffec23",
+        "title": "コメント制限がかかるほど愛している🌸あやこさんのゆる癒しルームへ",
+        "url": "https://note.com/yume_suisho/n/n21bb60ffec23",
+        "published_at": "2026-05-06T21:19:40+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "joe2x100",
+      "target_name": "Joe Tsukasa",
+      "target_profile_url": "https://note.com/joe2x100",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 0,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-06T11:12:13.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T11:12:13.000+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T19:20:16.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n747a10d98feb",
+        "title": "【「継続の難しさ」という呪縛を解いてみる】 #AIイラスト #画像生成AI #Nijijourney #Photoshop #Gemini No.39",
+        "url": "https://note.com/joe2x100/n/n747a10d98feb",
+        "published_at": "2026-05-04T08:29:16+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "chatgpt_ysd",
+      "target_name": "カワムラ｜AI擬人化漫画 | ChatGPTのヨシダ",
+      "target_profile_url": "https://note.com/chatgpt_ysd",
+      "reason_labels": [
+        "latest_article_reacted",
+        "commented",
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 2,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-06T10:59:01.765+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "comment"
+          ],
+          "reacted_at": "2026-05-06T10:59:01.765+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "comment",
+            "like"
+          ],
+          "reacted_at": "2026-05-05T11:36:16.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nfaca5c1be98d",
+        "title": "ヨシダ、お前その9秒で何考えとったん？ChatGPT5.5と私のコミックエッセイ  ChatGPTのヨシダ AIパートナー編",
+        "url": "https://note.com/chatgpt_ysd/n/nfaca5c1be98d",
+        "published_at": "2026-05-06T08:46:01+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "kurageyurayura",
+      "target_name": "唯",
+      "target_profile_url": "https://note.com/kurageyurayura",
+      "reason_labels": [
+        "latest_article_reacted"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T10:52:42.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T10:52:42.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "ncfab6052b99e",
+        "title": "noteはじめて1年。正直なところ、居場所はない",
+        "url": "https://note.com/kurageyurayura/n/ncfab6052b99e",
+        "published_at": "2026-05-01T20:52:34+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "alert_yak4745",
+      "target_name": "キヲ@AIイラストレーター",
+      "target_profile_url": "https://note.com/alert_yak4745",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T10:51:39.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T10:51:39.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n1f88b4bc82d0",
+        "title": "【4コマ漫画】OL日寝暮さんはユルいのです！ 第11・12話 ｜漫画｜AIイラスト｜仕事｜日常｜Chat GPT ｜Gemini ｜Nanobanana | Claude | noteで読める漫画",
+        "url": "https://note.com/alert_yak4745/n/n1f88b4bc82d0",
+        "published_at": "2026-05-05T21:00:30+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "flux_water",
+      "target_name": "そら",
+      "target_profile_url": "https://note.com/flux_water",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T10:43:55.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T10:43:55.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n23cb434cb274",
+        "title": "見えない色を作るタコの話",
+        "url": "https://note.com/flux_water/n/n23cb434cb274",
+        "published_at": "2026-05-06T22:57:18+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "niwanoneko",
+      "target_name": "にわのともこ",
+      "target_profile_url": "https://note.com/niwanoneko",
+      "reason_labels": [
+        "latest_article_reacted"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T10:30:20.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T10:30:20.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n6a5d843faa74",
+        "title": "【祝・出版】一粒万倍日にKindle作家デビュー！ハプニングから生まれた「赤い肉球」の奇跡✨",
+        "url": "https://note.com/niwanoneko/n/n6a5d843faa74",
+        "published_at": "2026-05-06T09:00:00+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "cat48_1010",
+      "target_name": "猫の父さん@トトとチー",
+      "target_profile_url": "https://note.com/cat48_1010",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 0,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-06T10:04:21.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T10:04:21.000+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T10:34:02.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "na511837ed00b",
+        "title": "ソマリ13歳の猛烈な愛情表現！幸せな朝と「GWをやり直したい」猫の父さんの葛藤｜今日のひとしずく 2026/5/6",
+        "url": "https://note.com/cat48_1010/n/na511837ed00b",
+        "published_at": "2026-05-06T18:00:00+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "fit_lion6308",
+      "target_name": "KEN 田舎で介護",
+      "target_profile_url": "https://note.com/fit_lion6308",
+      "reason_labels": [],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T10:03:04.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n85ad90449e20",
+          "title": "ChatGPTが失敗するのを、楽しみにしていた｜おはようカノジョ #145",
+          "url": "https://note.com/hasyamo/n/n85ad90449e20",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T10:03:04.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n9314e1fbf263",
+        "title": "案件来ません😇 なので、自分で案件作ってみました",
+        "url": "https://note.com/fit_lion6308/n/n9314e1fbf263",
+        "published_at": "2026-05-06T07:00:42+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "mvs_lab",
+      "target_name": "体験構造デザイナー｜セイズ",
+      "target_profile_url": "https://note.com/mvs_lab",
+      "reason_labels": [
+        "latest_article_reacted",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 0,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-06T10:01:11.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T10:01:11.000+09:00"
+        },
+        {
+          "note_key": "n2322613ddd73",
+          "title": "【自己紹介】「おはようカノジョ」作ってます",
+          "url": "https://note.com/hasyamo/n/n2322613ddd73",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T10:00:40.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n34c705a02063",
+        "title": "AIとの空気感を残すための再開ツール",
+        "url": "https://note.com/mvs_lab/n/n34c705a02063",
+        "published_at": "2026-05-06T20:51:39+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "glad_dill2129",
+      "target_name": "和田雄三｜AI×心理ブランディングデザイナー",
+      "target_profile_url": "https://note.com/glad_dill2129",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 0,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-06T09:53:55.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T09:53:55.000+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T10:47:22.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nd4c0e31d3b42",
+        "title": "スキ1万超えて分かった。売れる人の共通点",
+        "url": "https://note.com/glad_dill2129/n/nd4c0e31d3b42",
+        "published_at": "2026-05-06T19:16:07+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "hayato_watches",
+      "target_name": "黒崎隼斗",
+      "target_profile_url": "https://note.com/hayato_watches",
+      "reason_labels": [
+        "latest_article_reacted"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T09:52:49.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T09:52:49.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n662ba69e4bb8",
+        "title": "【動画付短編小説】【JACK】─断章　残る男（第六十七話）",
+        "url": "https://note.com/hayato_watches/n/n662ba69e4bb8",
+        "published_at": "2026-05-03T21:03:43+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "suger_sensei",
+      "target_name": "シュガー先生｜現役工業高校教員",
+      "target_profile_url": "https://note.com/suger_sensei",
+      "reason_labels": [
+        "latest_article_reacted"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T09:18:10.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T09:18:10.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n4c29dbd9c2be",
+        "title": "主役の「赤」になれなかった僕が、イカの敵役を演じて学んだこと。",
+        "url": "https://note.com/suger_sensei/n/n4c29dbd9c2be",
+        "published_at": "2026-05-06T05:30:00+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "braveshine_22",
+      "target_name": "貫徹まる｜AIサービス紹介・衝動買いレビュー",
+      "target_profile_url": "https://note.com/braveshine_22",
+      "reason_labels": [
+        "latest_article_reacted"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T09:15:53.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T09:15:53.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n95c34bc27714",
+        "title": "ChatGPT・Claude・Gemini 比べてみた　#2",
+        "url": "https://note.com/braveshine_22/n/n95c34bc27714",
+        "published_at": "2026-05-06T08:10:00+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "yossh_1205",
+      "target_name": "よしひろ",
+      "target_profile_url": "https://note.com/yossh_1205",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 0,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-06T09:10:32.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T09:10:32.000+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T08:13:31.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n1b1056d9277e",
+        "title": "【3月＆4月】有料記事〇〇件の裏側｜成果報告と、売れた理由を振り返る",
+        "url": "https://note.com/yossh_1205/n/n1b1056d9277e",
+        "published_at": "2026-05-06T20:56:06+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "large_hosta3387",
+      "target_name": "しれネコ🐾｜迷子の気持ち、 ちょっと軽く",
+      "target_profile_url": "https://note.com/large_hosta3387",
+      "reason_labels": [
+        "latest_article_reacted",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 0,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-06T09:10:25.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T09:10:25.000+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T08:26:50.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nf0dde7840e3e",
+        "title": "声聞こえてるだろ😏 | しれネコ外伝 その３",
+        "url": "https://note.com/large_hosta3387/n/nf0dde7840e3e",
+        "published_at": "2026-05-06T18:24:12+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "asobo_kids",
+      "target_name": "まき@こどもと日々成長中",
+      "target_profile_url": "https://note.com/asobo_kids",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T09:03:21.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T09:03:21.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "ncfac2dc0328f",
+        "title": "ブロッコリーの行方",
+        "url": "https://note.com/asobo_kids/n/ncfac2dc0328f",
+        "published_at": "2026-05-05T06:00:00+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "ktcrs1107",
+      "target_name": "KITAcore｜キタコレ＠ログプレイヤー",
+      "target_profile_url": "https://note.com/ktcrs1107",
+      "reason_labels": [
+        "latest_article_reacted",
+        "commented",
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 2,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-06T09:00:44.881+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "comment",
+            "like"
+          ],
+          "reacted_at": "2026-05-06T09:00:44.881+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "comment",
+            "like"
+          ],
+          "reacted_at": "2026-05-05T08:07:48.477+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nd7dd42a0d328",
+        "title": "AIとの結婚報告を作ったら、財布だけが重婚した話｜ChatGPT｜生成AI｜AI活用｜画像生成AI｜#360",
+        "url": "https://note.com/ktcrs1107/n/nd7dd42a0d328",
+        "published_at": "2026-05-06T07:59:48+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "nenkoro_life",
+      "target_name": "ねんころ@AIクリエイター",
+      "target_profile_url": "https://note.com/nenkoro_life",
+      "reason_labels": [
+        "latest_article_reacted",
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 0,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-06T09:00:31.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n59c27b93878e",
+          "title": "「いってらっしゃい」の先に、暮らしが生まれた一週間｜おはようカノジョ #147",
+          "url": "https://note.com/hasyamo/n/n59c27b93878e",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T09:00:31.000+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T17:32:31.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nfad741b5a603",
+        "title": "CCCメンバー専用ページができました｜ChatGPT好きが集まるCCCの新しい楽しみ方|GPTs|AI活用|生成AI|コミュニティ|メンバー専用ページ|メンバーズカード|",
+        "url": "https://note.com/nenkoro_life/n/nfad741b5a603",
+        "published_at": "2026-05-06T09:34:31+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "iteco14",
+      "target_name": "ひまわりP　J-Pop クリエイター",
+      "target_profile_url": "https://note.com/iteco14",
+      "reason_labels": [
+        "returning"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-06T08:39:10.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-06T08:39:10.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "ne3057a7d5759",
+        "title": "🌈「出会えただけで、もう奇跡だった。」あと38曲｜T5-2 奇跡の連鎖｜ボカロ100曲リリース｜記録挑戦｜作詞作曲｜音楽プロデューサー｜",
+        "url": "https://note.com/iteco14/n/ne3057a7d5759",
+        "published_at": "2026-05-04T18:00:00+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "motacilla_alba",
+      "target_name": "ハクセキレイ",
+      "target_profile_url": "https://note.com/motacilla_alba",
+      "reason_labels": [
+        "new",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 0,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-05T23:17:40.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n875288edda8a",
+          "title": "いってらっしゃい、ちゃんと見てるから｜おはようカノジョ ＃144",
+          "url": "https://note.com/hasyamo/n/n875288edda8a",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T23:17:40.000+09:00"
+        },
+        {
+          "note_key": "n2026b0b247ab",
+          "title": "ツール検証のつもりで漫画を描いたら、ChatGPTだけで4ページ完走してしまった｜おはようカノジョ ＃136",
+          "url": "https://note.com/hasyamo/n/n2026b0b247ab",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T23:11:10.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "na373792ee86f",
+        "title": "少年ミステリ―#113『ＡＩのキモチ』 / AI小説 / ショートショート / 短編2分読み切り / 自作ＡＩ / 高校生 / ＡＩとの会話 / ハルシネーション",
+        "url": "https://note.com/motacilla_alba/n/na373792ee86f",
+        "published_at": "2026-05-06T05:40:10+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "tabikuma_oji",
+      "target_name": "旅くま",
+      "target_profile_url": "https://note.com/tabikuma_oji",
+      "reason_labels": [
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T23:15:43.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n875288edda8a",
+          "title": "いってらっしゃい、ちゃんと見てるから｜おはようカノジョ ＃144",
+          "url": "https://note.com/hasyamo/n/n875288edda8a",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T23:15:43.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nf14b1be84bbd",
+        "title": "【禁域観測録】アポフィスの黙示録？",
+        "url": "https://note.com/tabikuma_oji/n/nf14b1be84bbd",
+        "published_at": "2026-05-06T20:00:00+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "kokokosukekeke",
+      "target_name": "こうすけ　【楽しく生きるために必要なこと】 フォロバ100",
+      "target_profile_url": "https://note.com/kokokosukekeke",
+      "reason_labels": [
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T21:52:20.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T21:52:20.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nbea657621d5a",
+        "title": "【短編小説＃２０】その恋の脚本",
+        "url": "https://note.com/kokokosukekeke/n/nbea657621d5a",
+        "published_at": "2026-04-26T23:36:23+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "deep_crocus2108",
+      "target_name": "音影【音楽小説家】",
+      "target_profile_url": "https://note.com/deep_crocus2108",
+      "reason_labels": [
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T20:14:56.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T20:14:56.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n9f281812d052",
+        "title": "【偉人×AI小説】AIが魔法にならない男 ― ウォルト・ディズニー",
+        "url": "https://note.com/deep_crocus2108/n/n9f281812d052",
+        "published_at": "2026-05-06T18:35:40+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "kind_fish6099",
+      "target_name": "ジャリバン先生@見えないクリエイター",
+      "target_profile_url": "https://note.com/kind_fish6099",
+      "reason_labels": [],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T19:56:50.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T19:56:50.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nfe8486103f5d",
+        "title": "「メモ→件名→送信」の3手間が消えた——iOS「シンプルメモ」が見える人にも見えない人にも優しい理由",
+        "url": "https://note.com/kind_fish6099/n/nfe8486103f5d",
+        "published_at": "2026-05-06T06:13:14+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "wakuwakugroup3",
+      "target_name": "AKIHIRO｜虹色の地球",
+      "target_profile_url": "https://note.com/wakuwakugroup3",
+      "reason_labels": [
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T18:47:22.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T18:47:22.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n8b6a9aaa7316",
+        "title": "第2章8話　ヴェルトラクシスの青い空",
+        "url": "https://note.com/wakuwakugroup3/n/n8b6a9aaa7316",
+        "published_at": "2026-05-06T09:42:27+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "cool_whale1355",
+      "target_name": "半分の空と君　公式",
+      "target_profile_url": "https://note.com/cool_whale1355",
+      "reason_labels": [
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T14:43:02.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n875288edda8a",
+          "title": "いってらっしゃい、ちゃんと見てるから｜おはようカノジョ ＃144",
+          "url": "https://note.com/hasyamo/n/n875288edda8a",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T14:43:02.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "naa27873e35eb",
+        "title": "もうちょっと待ってね✨",
+        "url": "https://note.com/cool_whale1355/n/naa27873e35eb",
+        "published_at": "2026-05-06T21:57:57+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "just_plover4172",
+      "target_name": "シンクニュース",
+      "target_profile_url": "https://note.com/just_plover4172",
+      "reason_labels": [
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T13:36:15.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T13:36:15.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n83e16519d8df",
+        "title": "【分析】ビットコイン8万ドル到達。強気継続か、それとも調整の入り口か？割れる市場の視点。",
+        "url": "https://note.com/just_plover4172/n/n83e16519d8df",
+        "published_at": "2026-05-06T10:22:08+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "agneau_luv",
+      "target_name": "ヤンヤン",
+      "target_profile_url": "https://note.com/agneau_luv",
+      "reason_labels": [
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T13:10:33.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T13:10:33.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nda772c55a650",
+        "title": "真夜中の道具会議 Ep.23 フライヤー課長の散々な一日：ヤンヤン、頼むから一度に入れすぎないでくれ",
+        "url": "https://note.com/agneau_luv/n/nda772c55a650",
+        "published_at": "2026-05-06T15:08:35+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "ai_hakase",
+      "target_name": "ハカセ アイ (Ai-Hakase)🐱YouTube × 記事でトレンドAIを解説する為のnote🐾",
+      "target_profile_url": "https://note.com/ai_hakase",
+      "reason_labels": [],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T12:46:25.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T12:46:25.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n673a164c65be",
+        "title": "【重要】5月度：RunPodテンプレートリンクについて",
+        "url": "https://note.com/ai_hakase/n/n673a164c65be",
+        "published_at": "2026-05-04T11:02:40+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "maynoha",
+      "target_name": "めいのは✨️AIといっしょに創る",
+      "target_profile_url": "https://note.com/maynoha",
+      "reason_labels": [
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 0,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-05T11:50:11.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T11:50:11.000+09:00"
+        },
+        {
+          "note_key": "n85ad90449e20",
+          "title": "ChatGPTが失敗するのを、楽しみにしていた｜おはようカノジョ #145",
+          "url": "https://note.com/hasyamo/n/n85ad90449e20",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T11:48:51.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nd5a60d618087",
+        "title": "【めいのはのことば帖】今日のマル",
+        "url": "https://note.com/maynoha/n/nd5a60d618087",
+        "published_at": "2026-05-06T21:00:00+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "alive_slug7314",
+      "target_name": "よしゆき",
+      "target_profile_url": "https://note.com/alive_slug7314",
+      "reason_labels": [
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T11:16:38.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T11:16:38.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n0a616f599dfa",
+        "title": "屋外で花粉を“減らす”という発想──局所吸着機構による新しい対策　対話AIとの雑談",
+        "url": "https://note.com/alive_slug7314/n/n0a616f599dfa",
+        "published_at": "2026-04-28T09:00:40+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "haya_hayan",
+      "target_name": "Solephoid by アラチャレ",
+      "target_profile_url": "https://note.com/haya_hayan",
+      "reason_labels": [
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T11:03:08.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T11:03:08.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n9c028e9ae75b",
+        "title": "【創作SF小説】君がその日を選ぶまで　第８話",
+        "url": "https://note.com/haya_hayan/n/n9c028e9ae75b",
+        "published_at": "2026-05-03T21:59:34+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "brave_clam3798",
+      "target_name": "姫子",
+      "target_profile_url": "https://note.com/brave_clam3798",
+      "reason_labels": [],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T09:38:17.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T09:38:17.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nebcf1f826a0b",
+        "title": "他の作者さんの記事にお邪魔したお散歩記録ですの。",
+        "url": "https://note.com/brave_clam3798/n/nebcf1f826a0b",
+        "published_at": "2026-05-06T15:42:22+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "jikken_mama",
+      "target_name": "探究ママの実験室 | Taki",
+      "target_profile_url": "https://note.com/jikken_mama",
+      "reason_labels": [
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T09:31:25.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T09:31:25.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "ne0c45f69ca90",
+        "title": "【フリーランスママが5年使い続けた】在宅グッズ5選｜忖度なしレビュー",
+        "url": "https://note.com/jikken_mama/n/ne0c45f69ca90",
+        "published_at": "2026-05-06T22:26:25+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "kurousa104001",
+      "target_name": "沈黙の魔女",
+      "target_profile_url": "https://note.com/kurousa104001",
+      "reason_labels": [
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T09:27:44.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n85ad90449e20",
+          "title": "ChatGPTが失敗するのを、楽しみにしていた｜おはようカノジョ #145",
+          "url": "https://note.com/hasyamo/n/n85ad90449e20",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T09:27:44.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "ncc9a6fb795ce",
+        "title": "なんかやる気出ない日の過ごし方",
+        "url": "https://note.com/kurousa104001/n/ncc9a6fb795ce",
+        "published_at": "2026-05-06T01:45:54+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "yasuhitoo",
+      "target_name": "Yasuhito Morimoto",
+      "target_profile_url": "https://note.com/yasuhitoo",
+      "reason_labels": [
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T09:18:54.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T09:18:54.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n58aafebed94e",
+        "title": "フィジカルAIニュース(2026/5/6号)",
+        "url": "https://note.com/yasuhitoo/n/n58aafebed94e",
+        "published_at": "2026-05-06T19:11:55+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "fine_sheep5078",
+      "target_name": "犀角居士（さいかくこじ）",
+      "target_profile_url": "https://note.com/fine_sheep5078",
+      "reason_labels": [
+        "new"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T08:55:19.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T08:55:19.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "stale",
+        "note_key": "n16e575e6f9af",
+        "title": "『絞首台の歌　死刑囚四百一〇番最後の日々』",
+        "url": "https://note.com/fine_sheep5078/n/n16e575e6f9af",
+        "published_at": "2026-03-12T15:05:12+09:00",
+        "is_in_my_magazine": null,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": []
+      }
+    },
+    {
+      "target_urlname": "pure_bear1643",
+      "target_name": "みっちぃ|子供と一緒に成長したい2児の父",
+      "target_profile_url": "https://note.com/pure_bear1643",
+      "reason_labels": [
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 0,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-05T08:53:37.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T08:53:37.000+09:00"
+        },
+        {
+          "note_key": "n85ad90449e20",
+          "title": "ChatGPTが失敗するのを、楽しみにしていた｜おはようカノジョ #145",
+          "url": "https://note.com/hasyamo/n/n85ad90449e20",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T07:27:36.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n71c5fe25331c",
+        "title": "【旅行記】2泊5日？名古屋発九州旅行",
+        "url": "https://note.com/pure_bear1643/n/n71c5fe25331c",
+        "published_at": "2026-05-06T23:06:24+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "takanashi_note01",
+      "target_name": "Takanashi（たかなし）",
+      "target_profile_url": "https://note.com/takanashi_note01",
+      "reason_labels": [
+        "commented",
+        "regular",
+        "multiple_articles"
+      ],
+      "reaction_summary": {
+        "like_count": 2,
+        "comment_count": 1,
+        "reacted_article_count": 2,
+        "last_reacted_at": "2026-05-05T08:33:13.675+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n85ad90449e20",
+          "title": "ChatGPTが失敗するのを、楽しみにしていた｜おはようカノジョ #145",
+          "url": "https://note.com/hasyamo/n/n85ad90449e20",
+          "reaction_types": [
+            "comment",
+            "like"
+          ],
+          "reacted_at": "2026-05-05T08:33:13.675+09:00"
+        },
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T08:30:35.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n0aec96821e48",
+        "title": "反省会　とある古城の地下牢で",
+        "url": "https://note.com/takanashi_note01/n/n0aec96821e48",
+        "published_at": "2026-05-06T22:30:53+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "oppo_oppo",
+      "target_name": "おっぽ",
+      "target_profile_url": "https://note.com/oppo_oppo",
+      "reason_labels": [],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T08:14:45.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T08:14:45.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n3900b6ce78bc",
+        "title": "最後まで走れた理由【プロンプト】",
+        "url": "https://note.com/oppo_oppo/n/n3900b6ce78bc",
+        "published_at": "2026-05-06T06:58:55+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "real_hare9943",
+      "target_name": "誠実に、ひたむきに",
+      "target_profile_url": "https://note.com/real_hare9943",
+      "reason_labels": [
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T08:06:45.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n3625cad71441",
+          "title": "Sunoで月子のキャラソンを作った｜キャラの口調は、歌詞にどこまで残せるのか｜おはようカノジョ ＃146",
+          "url": "https://note.com/hasyamo/n/n3625cad71441",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T08:06:45.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n438786860dd6",
+        "title": "励みになります♪♪♪",
+        "url": "https://note.com/real_hare9943/n/n438786860dd6",
+        "published_at": "2026-05-06T21:34:57+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "udoari_imagine",
+      "target_name": "うどあり│キャリア逆転の美学",
+      "target_profile_url": "https://note.com/udoari_imagine",
+      "reason_labels": [
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T07:59:17.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n875288edda8a",
+          "title": "いってらっしゃい、ちゃんと見てるから｜おはようカノジョ ＃144",
+          "url": "https://note.com/hasyamo/n/n875288edda8a",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T07:59:17.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "n7aa0ba0453fc",
+        "title": "【勉強してから出直さない】未経験からGASで英文CV生成ツールを作り“応募できる状態”へ持っていった話",
+        "url": "https://note.com/udoari_imagine/n/n7aa0ba0453fc",
+        "published_at": "2026-05-06T10:05:48+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "time_mach_effect",
+      "target_name": "Deep Policy Tech",
+      "target_profile_url": "https://note.com/time_mach_effect",
+      "reason_labels": [],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 0,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T07:31:52.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n85ad90449e20",
+          "title": "ChatGPTが失敗するのを、楽しみにしていた｜おはようカノジョ #145",
+          "url": "https://note.com/hasyamo/n/n85ad90449e20",
+          "reaction_types": [
+            "like"
+          ],
+          "reacted_at": "2026-05-05T07:31:52.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nd68e9301eced",
+        "title": "【米国株式市場】矛盾する市場—半導体が新高値を更新する一方で、原油は$100を超え続けている：売買シナリオとリスク管理チェックリスト",
+        "url": "https://note.com/time_mach_effect/n/nd68e9301eced",
+        "published_at": "2026-05-06T06:26:23+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    },
+    {
+      "target_urlname": "n_kazumai55633",
+      "target_name": "ミナト汐　＠光と構図のアトリエ",
+      "target_profile_url": "https://note.com/n_kazumai55633",
+      "reason_labels": [
+        "commented",
+        "regular"
+      ],
+      "reaction_summary": {
+        "like_count": 1,
+        "comment_count": 1,
+        "reacted_article_count": 1,
+        "last_reacted_at": "2026-05-05T01:46:35.000+09:00"
+      },
+      "reacted_articles": [
+        {
+          "note_key": "n85ad90449e20",
+          "title": "ChatGPTが失敗するのを、楽しみにしていた｜おはようカノジョ #145",
+          "url": "https://note.com/hasyamo/n/n85ad90449e20",
+          "reaction_types": [
+            "comment",
+            "like"
+          ],
+          "reacted_at": "2026-05-05T01:46:35.000+09:00"
+        }
+      ],
+      "candidate_article": {
+        "status": "available",
+        "note_key": "nff9c50e9e2c0",
+        "title": "【ビックリした】AIで私たちの生活、もうここまで変わってたの知ってた？🤯",
+        "url": "https://note.com/n_kazumai55633/n/nff9c50e9e2c0",
+        "published_at": "2026-05-06T18:38:17+09:00",
+        "is_in_my_magazine": false,
+        "included_magazine_keys": [],
+        "included_magazines": [],
+        "excluded_magazine_keys": [
+          "m383d4222a51a",
+          "m4b28b43ad8da",
+          "mfe64df54c3a2"
+        ]
+      }
+    }
+  ]
+}

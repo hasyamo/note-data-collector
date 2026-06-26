@@ -1,0 +1,98 @@
+name: Collect Fan Data
+
+on:
+  schedule:
+    # 5:00 JST = 20:00 UTC前日
+    - cron: '0 20 * * *'
+    # 9:00 JST = 0:00 UTC
+    - cron: '0 0 * * *'
+    # 13:00 JST = 4:00 UTC
+    - cron: '0 4 * * *'
+    # 17:00 JST = 8:00 UTC
+    - cron: '0 8 * * *'
+    # 21:00 JST = 12:00 UTC
+    - cron: '0 12 * * *'
+    # 1:00 JST = 16:00 UTC
+    - cron: '0 16 * * *'
+  workflow_dispatch: # 手動実行用
+
+concurrency:
+  group: collect-fan-data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout collector
+        uses: actions/checkout@v4
+
+      - name: Re-sync collector to latest main
+        # concurrency 待ちの間にmainが進んでいた場合に備えて最新へ
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Clone note-fan-board
+        run: |
+          git clone https://x-access-token:${{ secrets.FAN_BOARD_TOKEN }}@github.com/hasyamo/note-fan-board.git ../note-fan-board
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Sync existing data from note-fan-board
+        run: |
+          if [ -d ../note-fan-board/data ]; then
+            rsync -a ../note-fan-board/data/ data/
+          fi
+
+      - name: Collect data
+        env:
+          TESTERS_TXT: fan-board/testers.txt
+        run: python scripts/collect.py
+
+      - name: Commit data to collector
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if ! git diff --staged --quiet; then
+            git commit -m "📊 $(TZ=Asia/Tokyo date +%Y-%m-%d) data"
+            # 競合時はこちらの最新収集データを優先（collect.pyが全クリエイター分を再生成しているため）
+            git pull --rebase -X ours origin main
+            git push
+          fi
+
+      - name: Copy data to note-fan-board
+        run: |
+          cd ../note-fan-board
+          git pull --rebase -X ours
+          cd -
+          rsync -a --delete data/ ../note-fan-board/data/
+
+      - name: Build READER MAP data (relation_graph.json)
+        run: |
+          cd ../note-fan-board
+          # creators.txt の有効メンバー全員分のJSONを生成
+          while read -r line; do
+            urlname="$(echo "$line" | awk '{print $1}')"
+            [ -z "$urlname" ] && continue
+            case "$urlname" in \#*) continue ;; esac
+            if [ -d "data/$urlname" ]; then
+              python scripts/build_relation_graph.py "$urlname" || echo "skip: $urlname"
+            fi
+          done < ../note-data-collector/creators.txt
+
+      - name: Commit and push note-fan-board
+        run: |
+          cd ../note-fan-board
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || (git commit -m "📊 $(TZ=Asia/Tokyo date +%Y-%m-%d) fan data + reader map" && git push)

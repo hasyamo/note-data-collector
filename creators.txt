@@ -2,7 +2,7 @@ hasyamo 2026-03-01
 # チャッティさん
 fordtaurus116 2026-04-07
 # はんくさん
-hunk_shuntana 2026-04-07
+#hunk_shuntana 2026-04-07
 # めじゅさん
 dandan_arigato19 2026-04-07
 # カワムラさん

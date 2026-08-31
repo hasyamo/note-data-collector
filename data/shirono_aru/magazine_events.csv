@@ -686,3 +686,6 @@ detected_at,event_type,note_key,magazine_key
 2026-08-31T20:04:36+09:00,added,n2152ae6a9ec3,m2ea72595cf8d
 2026-08-31T20:04:36+09:00,added,n2152ae6a9ec3,m7ade94ab4e06
 2026-08-31T20:04:36+09:00,added,n2152ae6a9ec3,m6d69812caeed
+2026-09-01T00:56:09+09:00,added,n2152ae6a9ec3,m4fd0ea8f6c37
+2026-09-01T00:56:09+09:00,removed,nd89d0f7721fb,m5ca58e6bf38b
+2026-09-01T00:56:09+09:00,removed,ncf5304cb2df6,m5ca58e6bf38b

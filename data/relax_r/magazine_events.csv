@@ -307,3 +307,5 @@ detected_at,event_type,note_key,magazine_key
 2026-09-22T00:16:33+09:00,added,n7091d88fbf8f,m5bdd94e01dac
 2026-09-25T22:42:52+09:00,added,n3f8e1a84b6dc,m944bc607eff9
 2026-09-26T18:53:57+09:00,added,n3f8e1a84b6dc,m7325f611df66
+2026-09-27T19:34:11+09:00,added,nfa84362df34f,m944bc607eff9
+2026-09-27T19:34:11+09:00,removed,ne2209d86816d,m8ccd4a95fd0d

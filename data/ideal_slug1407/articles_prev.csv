@@ -1,8 +1,9 @@
 key,like_count,comment_count
-ncf1f9eda7279,48,2
-ncdff85940b16,56,1
-n8da177f8fbb5,61,3
-n84adc8acaa47,99,4
+ncf1f9eda7279,50,2
+naf685fbad62f,19,1
+ncdff85940b16,72,3
+n8da177f8fbb5,61,4
+n84adc8acaa47,101,6
 ne84e6a52e175,32,1
 nf5869b09659f,33,0
 ne266dcbba36f,32,0
@@ -182,7 +183,7 @@ nb6be58176dd6,56,2
 n0cb93c0f8cc0,48,0
 n52407e48fcc1,88,4
 ne4fb39743923,93,0
-n2cd3fd046b63,130,17
+n2cd3fd046b63,131,17
 n8ac8113e1b3d,68,0
 n1cc687a89039,48,0
 nf32ca9bafc26,58,6
